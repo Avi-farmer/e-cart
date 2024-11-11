@@ -1,38 +1,246 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .body{
+  background-image: linear-gradient(  rgb(135, 115, 119), rgb(172, 182, 182));
+} */
+/* Header Section */
+.header {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.831);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: aliceblue;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: aliceblue;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.input {
+  width: 40%;
+  height: 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.cart_icon {
+  font-size: 30px;
+}
+
+.login_btn {
+  background-color: orange;
   color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 9px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width:770px) {
+  .input {
+    width: 80%;
+  }
+
+  .login_btn {
+    display: none;
+  }
+
+  .cart_icon {
+    display: none;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* SideNav Section */
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 88vh;
+  position: sticky;
+  top: 70px;
+}
+
+.navbar1 li {
+  list-style: none;
+  padding: 10px;
+}
+
+@media (max-width:770px) {
+  .sidenav {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Login Section*/
+.loginpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+}
+
+/* Main Section*/
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+}
+
+.data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.data1 {
+  border-radius: 10px;
+  margin: 10px;
+  width: 180px;
+  height: 280px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width:770px) {
+  .data1 {
+    border-radius: 10px;
+    margin: 10px;
+    width: 140px;
+    height: 210px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+}
+
+.data1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.data1 img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.dataimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:770px) {
+  .data1 img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.imageproduct {
+  height: 500px;
+}
+
+.selectitems {
+  width: 100px;
+  height: 100px;
+  margin-top: 12px;
+}
+
+.allimages {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonplace {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.productimage {
+  height: 550px;
+  width: 90%;
+}
+
+@media (max-width:770px) {
+  .productimage {
+    height: 400px;
+  }
+}
+
+.buybtn,
+.cartbtn {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  padding: 10px 45px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.cartbtn {
+  background-color: rgb(255, 128, 0);
+}
+
+.cartbtn:hover {
+  background-color: rgba(56, 53, 53, 0.571);
+}
+
+.buybtn:hover {
+  background-color: rgba(56, 53, 53, 0.571);
+}
+
+.grpbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:770px) {
+  .grpbtn {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .buybtn,
+  .cartbtn {
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+  }
+}
+
+.imagefixed {
+  position: sticky;
+  top: 70px;
+}
+
+.rating {
+  background-color: rgb(5, 55, 5);
+  color: aliceblue;
+  width: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
