@@ -446,7 +446,7 @@ export const products = [
     //Laptops Data
     {
         id: 21,
-        brand: 'Hp',
+        brand: 'hp',
         title: 'Hp Vivobook 15, with Backlit Keyboard, Intel Core i3 12th Gen 1215U - (8 GB/512 GB SSD/Windows 11 Home) X1504ZA-NJ321WS Thin and Light Laptop  (15.6 Inch, Quiet Blue, With MS Office)',
         type: 'laptop',
         colour: 'black',

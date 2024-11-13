@@ -19,13 +19,13 @@ function Mobiles() {
 
 
     const handleCheckboxChange = (brand) => {
-        setSelectedBrands((prevSelectedBrands) => {
-            if (prevSelectedBrands.includes(brand)) {
+        setSelectedBrands((Brands) => {
+            if (Brands.includes(brand)) {
 
-                return prevSelectedBrands.filter((b) => b !== brand);
+                return Brands.filter((b) => b !== brand);
             } else {
 
-                return [...prevSelectedBrands, brand];
+                return [...Brands, brand];
             }
         });
     };
