@@ -244,3 +244,7 @@
   align-items: center;
   font-weight: bold;
 }
+    /* cart page */
+.cart_display_items{
+  display: flex;
+}

@@ -7,10 +7,13 @@ import { FaStar } from "react-icons/fa6";
 import { Col, Row } from 'react-bootstrap';
 import Header from '../Components/Header';
 
-function ProductDetails() {
+function ProductDetails({ addToCart }) {
   const { id } = useParams();
   const productDetail = products.find(mobile => mobile.id === Number(id));
 
+  const handleAddToCart = () => {
+    addToCart(productDetail);
+  };
 
   return (
     <div className='body'>
@@ -22,7 +25,9 @@ function ProductDetails() {
               <div className="imagefixed">
                 <img className="productimage" src={productDetail.images} alt={productDetail.brand} />
                 <div className="grpbtn">
-                  <button className="cartbtn"><MdShoppingCart /> Add To Cart</button>
+                  <button className="cartbtn" onClick={handleAddToCart}>
+                    <MdShoppingCart /> Add To Cart
+                  </button>
                   <button className="buybtn"><ImPower /> Buy Now</button>
                 </div>
               </div>
