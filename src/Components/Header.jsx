@@ -23,7 +23,7 @@ function Header({ cartCount }) {
             <button className="login_btn me-3">Login</button>
           </Link>
           <div className="cart_icon">
-            <Link to="/cart" style={{ textDecoration: 'none', color:'white' }} id="cart_display">
+            <Link to="/cart" style={{ textDecoration: 'none', color:'white' }}>
               <IoCartOutline />
               <span id="cart_display" className="text-white">
                 {cartCount}

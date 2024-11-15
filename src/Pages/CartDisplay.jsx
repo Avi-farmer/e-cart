@@ -28,7 +28,7 @@ const CartDisplay = ({ cart, setCart }) => {
                     Price: ₹<span className="h3">{item.price}</span>
                   </p>
                 </Col>
-                <Col sm={2}>
+                <Col sm={2} className='remove_btn'>
                   <button onClick={() => handleRemove(index)}>Remove</button>
                 </Col>
               </Row>
