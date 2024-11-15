@@ -1,4 +1,5 @@
 import React from 'react';
+import { Col, Row } from 'react-bootstrap';
 
 const CartDisplay = ({ cart, setCart }) => {
   const handleRemove = (index) => {
@@ -7,7 +8,7 @@ const CartDisplay = ({ cart, setCart }) => {
 
   return (
     <div className="container">
-      <div className="m-4 p-4">
+      <div className="m-4 pb-4">
         <center>
           <h1 className="m-3">Your Cart</h1>
         </center>
@@ -16,29 +17,21 @@ const CartDisplay = ({ cart, setCart }) => {
         ) : (
           <div>
             {cart.map((item, index) => (
-              <div key={index} className="cart_display_items d-flex justify-content-between align-items-center mb-4">
-                <div className="d-flex">
-                  <img
-                    src={item.images}
-                    alt={item.title}
-                    style={{ width: '130px', height: '140px', marginRight: '20px' }}
-                  />
-                  <div>
-                    <h5 className="pb-4">{item.title}</h5>
-                    <small className="pb-4 text-secondary">{item.description.slice(0, 100)}</small>
-                    <p>
-                      Price: ₹<span className="h3">{item.price}</span>
-                    </p>
-                  </div>
-                </div>
-                <button
-                  onClick={() => handleRemove(index)}
-                  className="btn btn-danger"
-                  style={{ padding: '5px 15px' }}
-                >
-                  Remove
-                </button>
-              </div>
+              <Row key={index} className="cart_display_items">
+                <Col sm={2}>
+                  <img src={item.images} alt={item.title} />
+                </Col>
+                <Col sm={8}>
+                  <h5 className="pb-4">{item.title}</h5>
+                  <small className="pb-4 text-secondary">{item.description.slice(0, 100)}</small>
+                  <p>
+                    Price: ₹<span className="h3">{item.price}</span>
+                  </p>
+                </Col>
+                <Col sm={2}>
+                  <button onClick={() => handleRemove(index)}>Remove</button>
+                </Col>
+              </Row>
             ))}
           </div>
         )}

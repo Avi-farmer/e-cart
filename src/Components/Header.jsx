@@ -9,7 +9,7 @@ function Header({ cartCount }) {
     <div className="header">
       <div className="container head">
         <div>
-          <h1>My Shop</h1>
+          <Link to='/'  style={{ textDecoration: 'none', color:'white' }}><h1>My Shop</h1></Link>
         </div>
         <div className="input">
           <div className="input-group">
@@ -23,7 +23,7 @@ function Header({ cartCount }) {
             <button className="login_btn me-3">Login</button>
           </Link>
           <div className="cart_icon">
-            <Link to="/cart" style={{ textDecoration: 'none' }} id="cart_display">
+            <Link to="/cart" style={{ textDecoration: 'none', color:'white' }} id="cart_display">
               <IoCartOutline />
               <span id="cart_display" className="text-white">
                 {cartCount}
