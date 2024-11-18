@@ -55,7 +55,7 @@ function Tvs() {
                                 <Link to={`/tvs/${e.id}`} key={e.id} style={{ textDecoration: 'none' }}>
                                     <div className='data1'>
                                         <div className='dataimage'>
-                                            <img src={e.images} alt={e.brand} />
+                                            <img src={e.images} alt={e.images} />
                                         </div>
                                         <div className='p-2 text-dark'>
                                             <h6>{e.brand}</h6>
