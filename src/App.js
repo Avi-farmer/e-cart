@@ -34,7 +34,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/login' element={<Login />} />
-        <Route path='/' element={<Dashboard cartCount={cartCount}/>} />
+        <Route path='/e-cart' element={<Dashboard cartCount={cartCount}/>} />
         <Route path='/mobiles' element={<Mobiles />} />
         <Route path='/mobiles/:id' element={<ProductDetails addToCart={addToCart} />} />
         <Route path='/laptops' element={<Laptop />} />
