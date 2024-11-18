@@ -57,7 +57,7 @@ function Mobiles() {
                             <Link to={`/mobiles/${e.id}`} key={e.id} style={{ textDecoration: 'none' }}>
                                 <div className="data1">
                                     <div className="dataimage">
-                                        <img src={e.images} alt={e.images} />
+                                        <img src={e.images} alt={e.brand} />
                                     </div>
                                     <div className="p-2 text-dark">
                                         <h6>{e.brand}</h6>
